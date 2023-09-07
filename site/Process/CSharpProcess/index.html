@@ -1,0 +1,1009 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Steps/CSharpWindows/">
+      
+      
+        <link rel="next" href="../CSharpParameter/">
+      
+      
+      <link rel="icon" href="../../assets/images/RVLogo.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>基础流程 - RVBUST CSharp SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="RVBUST CSharp SDK" class="md-header__button md-logo" aria-label="RVBUST CSharp SDK" data-md-component="logo">
+      
+  <img src="../../assets/images/RVLogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RVBUST CSharp SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              基础流程
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="RVBUST CSharp SDK" class="md-nav__button md-logo" aria-label="RVBUST CSharp SDK" data-md-component="logo">
+      
+  <img src="../../assets/images/RVLogo.png" alt="logo">
+
+    </a>
+    RVBUST CSharp SDK
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    配置步骤
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            配置步骤
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Steps/Prerequisite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    准备工作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Steps/CSharpExample/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    例程功能说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Steps/CSharpWindows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    图像获取流程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            图像获取流程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    基础流程
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    基础流程
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 系统初始化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 连接设备
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 连接设备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    a. 查找设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    b. 查看设备信息
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 创建相机对象
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 创建相机对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_1" class="md-nav__link">
+    a. 创建相机对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_1" class="md-nav__link">
+    b. 打开相机
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 相机采集数据
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 相机采集数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_2" class="md-nav__link">
+    a. 设置拍摄参数并采集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_2" class="md-nav__link">
+    b. 保存数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 销毁相机对象
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 关闭相机系统
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSharpParameter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参数设置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    支持
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            支持
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Support/FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见问题及解答
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Support/Changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    版本变更记录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 系统初始化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 连接设备
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 连接设备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    a. 查找设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    b. 查看设备信息
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 创建相机对象
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 创建相机对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_1" class="md-nav__link">
+    a. 创建相机对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_1" class="md-nav__link">
+    b. 打开相机
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 相机采集数据
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 相机采集数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_2" class="md-nav__link">
+    a. 设置拍摄参数并采集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_2" class="md-nav__link">
+    b. 保存数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 销毁相机对象
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 关闭相机系统
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">基础流程</h1>
+<p>RVC 相机调用的逻辑流程图如下。</p>
+<p><img alt="图像获取流程图" src="../../assets/images/GeneralProcess.png" /></p>
+<p>API 接口详细说明可查看安装目录下的文档：</p>
+<p>Windows 系统：/RVCSDK/docs/RVC SDK Documentation.html</p>
+<p>Linux 系统：/opt/RVC/docs/RVC SDK Documentation.html</p>
+<p>运行错误代码可查看安装目录下的文件：</p>
+<p>Windows 系统：/RVCSDK/docs/ErrorCode.csv</p>
+<p>Linux 系统：/opt/RVC/docs/ErrorCode.csv</p>
+<p>图像获取基础流程及示例代码如下。</p>
+<h2 id="1">1. 系统初始化</h2>
+<p>硬件准备工作完成后，首先必须初始化 RVC 系统。执行下列代码：</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">RVC_CSharp</span><span class="p">.</span><span class="n">System</span><span class="p">.</span><span class="n">Init</span><span class="p">();</span>
+</span></code></pre></div>
+<h2 id="2">2. 连接设备</h2>
+<h3 id="a">a. 查找设备</h3>
+<p>查找设备有两种方式，一种是根据设备类型查找，一种是根据序列号查找。</p>
+<p>根据设备类型查找：SystemListDeviceType 可选 USB（USB 相机）、GigE（网口相机）、All（所有类型相机）。以查找网口相机并选取列表中的第 1 台设备为例：</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">Device</span><span class="o">&gt;</span><span class="w"> </span><span class="n">devices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RVC_CSharp</span><span class="p">.</span><span class="n">System</span><span class="p">.</span><span class="n">ListDevices</span><span class="p">(</span><span class="n">SystemListDeviceType</span><span class="p">.</span><span class="n">GigE</span><span class="p">);</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">Device</span><span class="w"> </span><span class="n">d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">devices</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>
+</span></code></pre></div>
+<p>根据序列号查找：以查找序列号为 P2GM630W002 的设备为例。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Device</span><span class="w"> </span><span class="n">d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Device</span><span class="p">();</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">RVC_CSharp</span><span class="p">.</span><span class="n">System</span><span class="p">.</span><span class="n">FindDevice</span><span class="p">(</span><span class="s">&quot;P2GM630W002&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">d1</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="b">b. 查看设备信息</h3>
+<p>通过 GetDeviceInfo()函数的返回值，可获取设备连接状态。true 代表已连接且成功获取相机驱动，false 代表相机不可用。</p>
+<p>设备信息中各字段的含义见下表。</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>含义</th>
+<th>数据类型</th>
+<th>取值说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>相机名称</td>
+<td>char</td>
+<td>-</td>
+</tr>
+<tr>
+<td>sn</td>
+<td>相机序列号</td>
+<td>char</td>
+<td>-</td>
+</tr>
+<tr>
+<td>factorydate</td>
+<td>出厂日期</td>
+<td>char</td>
+<td>-</td>
+</tr>
+<tr>
+<td>port</td>
+<td>端口</td>
+<td>char</td>
+<td>-</td>
+</tr>
+<tr>
+<td>type</td>
+<td>支持端口类型</td>
+<td>enum</td>
+<td>PortType_USB：USB 相机<br>PortType_GigE：网口相机</td>
+</tr>
+<tr>
+<td>cameraid</td>
+<td>相机 ID</td>
+<td>enum</td>
+<td>CameraID_Left：单目相机（左相机）<br>CameraID_Right：单目相机（右相机）<br>CameraID_Both：双目相机</td>
+</tr>
+<tr>
+<td>boardmodel</td>
+<td>主板型号</td>
+<td>int</td>
+<td>-</td>
+</tr>
+<tr>
+<td>support_x2</td>
+<td>支持双相机</td>
+<td>bool</td>
+<td>true：支持双相机<br>false：不支持双相机</td>
+</tr>
+<tr>
+<td>support_color</td>
+<td>支持光机投影颜色</td>
+<td>enum</td>
+<td>仅双目模式下可用。<br>ProjectorColor_Red：红色<br>ProjectorColor_Green：绿色<br>ProjectorColor_Blue：蓝色<br>ProjectorColor_White：白色</td>
+</tr>
+<tr>
+<td>workingdist_near_mm</td>
+<td>工作距离最小值（mm）</td>
+<td>int</td>
+<td>-</td>
+</tr>
+<tr>
+<td>workingdist_far_mm</td>
+<td>工作距离最大值（mm）</td>
+<td>int</td>
+<td>-</td>
+</tr>
+<tr>
+<td>firmware_version</td>
+<td>固件版本</td>
+<td>char</td>
+<td>-</td>
+</tr>
+<tr>
+<td>support_capture_mode</td>
+<td>支持拍摄模式</td>
+<td>enum</td>
+<td>P/I/X 系列相机：<br>CaptureMode_Fast：快速模式<br>CaptureMode_Normal：标准模式<br>G 系列相机：<br>CaptureMode_Ultra：高精度模式<br>CaptureMode_Robust：抗干扰模式</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3">3. 创建相机对象</h2>
+<h3 id="a_1">a. 创建相机对象</h3>
+<p>选取 1 台设备，创建相机对象。由设备信息中的 cameraid 字段，可查看当前相机对象可使用的 ID。</p>
+<p>单目相机：只能创建 X1 对象，且必须与 DeviceInfo 中的 ID 保持一致，使用 CameraID_Left 或 CameraID_Right。下面代码可调用设备列表中的相机 d1，使用单目模式左相机，创建一个 X1 对象 x1。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">X1</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RVC_CSharp</span><span class="p">.</span><span class="n">X1</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span><span class="w"> </span><span class="n">CameraID</span><span class="p">.</span><span class="n">CameraID_Left</span><span class="p">);</span>
+</span></code></pre></div>
+<p>双目相机：可创建 X1 对象与 X2 对象。创建 X1 对象时可选择使用 CameraID_Left（左相机）或 CameraID_Right（右相机），使用方法同单目相机；创建 X2 对象时使用双目模式。下面代码可调用设备列表中的设备 device，创建一个 X2 对象 x2。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">x2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X2</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">devices</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="b_1">b. 打开相机</h3>
+<p>以打开 x1 为例。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">x1</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+</span></code></pre></div>
+<p>通过 IsOpen() 函数的返回值，可判断当前相机是否打开且可用。</p>
+<h2 id="4">4. 相机采集数据</h2>
+<h3 id="a_2">a. 设置拍摄参数并采集</h3>
+<p>相机采集的常规步骤是先设置拍摄参数，再调用 Capture() 或 Capture2D() 函数进行点云与图像采集。下面以单目模式为例进行说明。</p>
+<p>如果需要手动修改各项参数，可使用方法一或方法二。各项参数的详细介绍见<a href="../CSharpParameter/">参数设置</a>。在实际应用中，建议直接使用相机内部的参数，或从参数配置文件中加载参数，详见方法三与方法四。</p>
+<p><strong>方法一</strong>：使用系统默认参数，并修改。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">X1</span><span class="p">.</span><span class="n">CaptureOptions</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X1</span><span class="p">.</span><span class="n">CaptureOptions</span><span class="p">.</span><span class="n">Default</span><span class="p">();</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1">//TODO:modify options</span>
+</span></code></pre></div>
+<p>使用修改后的 options 作为拍摄参数，调用 Capture() 函数，采集 1 帧点云与 1 帧 2D 图：</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">Capture</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+</span></code></pre></div>
+<p>使用修改后的 options 作为拍摄参数，调用 Capture2D() 函数，仅采集 1 帧 2D 图：</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">Capture2D</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+</span></code></pre></div>
+<p>采集完成后，修改后的参数将写入相机。</p>
+<p><strong>方法二</strong>：加载相机的内部参数，并修改。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">X1</span><span class="p">.</span><span class="n">CaptureOptions</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">X1</span><span class="p">.</span><span class="n">CaptureOptions</span><span class="p">();</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">x1</span><span class="p">.</span><span class="n">LoadCaptureOptionParameters</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="c1">// TODO:modify options</span>
+</span></code></pre></div>
+<p>使用修改后的 options 作为拍摄参数，调用 Capture() 函数，采集 1 帧点云与 1 帧 2D 图：</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">Capture</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+</span></code></pre></div>
+<p>使用修改后的 options 作为拍摄参数，调用 Capture2D() 函数，仅采集 1 帧 2D 图：</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">Capture2D</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+</span></code></pre></div>
+<p>采集完成后，修改后的参数将写入相机。</p>
+<p><strong>方法三</strong>：直接使用相机内部参数。可先在 RVCManager 软件中完成调参，将参数写入相机，之后在 SDK 中直接调用相机内存储的参数。</p>
+<p>调用 Capture() 函数，采集 1 帧点云与 1 帧 2D 图。Capture() 函数的参数缺省时，将直接使用相机内部存储的参数。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">Capture</span><span class="p">();</span>
+</span></code></pre></div>
+<p>调用 Capture2D() 函数，仅采集 1 帧 2D 图。Capture2D() 函数的参数缺省时，将直接使用相机内部存储的参数。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">Capture2D</span><span class="p">();</span>
+</span></code></pre></div>
+<p><strong>方法四</strong>：从配置文件中加载参数，并拍摄。如果需要同时调用多台相机进行拍摄，可将不同相机的拍摄参数保存为配置文件，在拍摄前导入配置文件以获取参数。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">LoadSettingFromFile</span><span class="p">(</span><span class="s">&quot;file.json&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+<p>调用 Capture() 函数，采集 1 帧点云与 1 帧 2D 图。Capture() 函数的参数缺省时，将直接使用相机内部存储的参数。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">Capture</span><span class="p">();</span>
+</span></code></pre></div>
+<p>调用 Capture2D() 函数，仅采集 1 帧 2D 图。Capture2D() 函数的参数缺省时，将直接使用相机内部存储的参数。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">Capture2D</span><span class="p">();</span>
+</span></code></pre></div>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>导入参数前，需检查配置文件中的参数是否适用于当前连接的相机，否则可能出现异常。</p>
+</div>
+<p>建议在同型号的相机之间导出/载入参数，并确保拍摄环境类似。</p>
+<h3 id="b_2">b. 保存数据</h3>
+<p>若采集成功，可通过下面代码保存.ply+ASCII 格式的 3D 点云。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">PointMap</span><span class="w"> </span><span class="n">pointMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">GetPointMap</span><span class="p">();</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">pointMap</span><span class="p">.</span><span class="n">SavePlyAscii</span><span class="p">(</span><span class="k">true</span><span class="p">,</span><span class="s">&quot;./pointCloud.ply&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+<p>由于 ASCII 保存较慢，也可调用 SavePlyBinary() 函数，使用二进制保存。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">PointMap</span><span class="w"> </span><span class="n">pointMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">GetPointMap</span><span class="p">();</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kt">string</span><span class="w"> </span><span class="n">pointCloudFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$&quot;./{info.name}-{info.sn}/PointCloud.ply&quot;</span><span class="p">;</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="n">pointMap</span><span class="p">.</span><span class="n">SavePlyBinary</span><span class="p">(</span><span class="n">pointCloudFile</span><span class="p">);</span>
+</span></code></pre></div>
+<p>SaveColorPointCloud() 函数可保存彩色点云。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">GetImage</span><span class="p">();</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">PointMap</span><span class="w"> </span><span class="n">pointMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">GetPointMap</span><span class="p">();</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="kt">string</span><span class="w"> </span><span class="n">colorPointCloudFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$&quot;./{info.name}-{info.sn}/{i}-ColorPointCloud.ply&quot;</span><span class="p">;</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="n">pointMap</span><span class="p">.</span><span class="n">SaveColorPointCloud</span><span class="p">(</span><span class="n">image</span><span class="p">,</span><span class="w"> </span><span class="n">colorPointCloudFile</span><span class="p">);</span>
+</span></code></pre></div>
+<p>可通过下面代码保存 2D 图像。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">.</span><span class="n">GetImage</span><span class="p">();</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">image</span><span class="p">.</span><span class="n">SaveImage</span><span class="p">(</span><span class="s">&quot;./image-ori.bmp&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+<p>如需获取并保存深度图，可执行如下代码。</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">Mat</span><span class="w"> </span><span class="n">mat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">depthMap</span><span class="p">.</span><span class="n">ToMat</span><span class="p">();</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">mat</span><span class="p">.</span><span class="n">SaveImage</span><span class="p">(</span><span class="s">&quot;./depthMap-opencv.tiff&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+<h2 id="5">5. 销毁相机对象</h2>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">x1</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="n">X1</span><span class="p">.</span><span class="n">Destroy</span><span class="p">(</span><span class="n">x1</span><span class="p">);</span>
+</span></code></pre></div>
+<h2 id="6">6. 关闭相机系统</h2>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">RVC_CSharp</span><span class="p">.</span><span class="n">System</span><span class="p">.</span><span class="n">Shutdown</span><span class="p">();</span>
+</span></code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
