@@ -1,5 +1,0 @@
-mkdocs==1.5.2
-mkdocs-material==9.2.8
-mkdocs-material-extensions==1.1.1
-Pygments==2.16.1
-jieba3k==0.35.1
