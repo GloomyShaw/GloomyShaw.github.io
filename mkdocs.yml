@@ -1,4 +1,5 @@
 site_name: RVBUST CSharp SDK
+site_url: "https://gloomyshaw.github.io/"
 
 nav:
   - 首页: index.md
