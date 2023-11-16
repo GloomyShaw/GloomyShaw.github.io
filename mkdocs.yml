@@ -1,24 +1,148 @@
 site_name: RVBUST CSharp SDK
 site_url: "https://gloomyshaw.github.io/"
 
+docs_dir: docs/
+exclude_docs: overrides/
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo:
+    assets/rv_logo.png
+  favicon:
+    assets/rv_logo.png
+  palette:
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+  features:
+    # - navigation.expand
+    # - navigation.indexes
+    # - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    # - toc.integrate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
 nav:
   - 首页: index.md
-  - 配置步骤:
-    - Steps/Prerequisite.md
-    - Steps/CSharpExample.md
-    - Steps/CSharpWindows.md
-  - 图像获取流程:
-    - Process/CSharpProcess.md
-    - Process/CSharpParameter.md
-  - 支持:
-    - Support/FAQ.md
-    - Support/Changelog.md
-
-theme: 
-  name: material
-  language: zh
-  logo: assets/images/RVLogo.png
-  favicon: assets/images/RVLogo.png
+  - RVC 系列产品: 
+    - 产品介绍: rvc/introduction.md
+    - 产品使用手册: 
+      - 目录: rvc/user_guide/index.md  
+      - 安全与监管: rvc/user_guide/safety.md
+      - 工作环境: rvc/user_guide/environment.md
+      - 相机硬件安装: rvc/user_guide/mounting.md
+      - 软件快速使用: rvc/user_guide/software.md
+      - 维护说明: rvc/user_guide/maintenance.md      
+      - 异常情况处理: rvc/user_guide/faq.md
+      - 扩展阅读: rvc/user_guide/readmore.md
+    - RVCManager 使用手册: 
+      - RVCManager 介绍: rvc/rvc_manager/index.md
+      - 软件安装: rvc/rvc_manager/installation.md
+      - 界面介绍: rvc/rvc_manager/overview.md
+      - 相机连接: rvc/rvc_manager/connect.md
+      - 拍摄与图像查看: rvc/rvc_manager/capture.md
+      - 参数设置: rvc/rvc_manager/parameter.md
+      - 数据保存: rvc/rvc_manager/fileio.md
+      - 常见问题及处理: rvc/rvc_manager/faq.md
+      - 版本更新记录: rvc/rvc_manager/changelog.md
+    - RVC SDK 使用手册: 
+      - SDK 概览: rvc/sdk/overview.md
+      - C++:
+        - C++ SDK 配置步骤: rvc/sdk/cpp/cpp_tutorial.md
+        - C++ SDK 例程: rvc/sdk/cpp/cpp_examples.md
+        - C++ API: rvc/sdk/cpp/cpp_api.md
+      - Python:
+        - Python SDK 配置步骤: rvc/sdk/python/python_tutorial.md
+        - Python SDK 例程: rvc/sdk/python/python_examples.md
+        - Python API: rvc/sdk/python/python_api.md
+      - C#:
+        - C# SDK 配置步骤: rvc/sdk/csharp/csharp_tutorial.md
+        - C# SDK 例程: rvc/sdk/csharp/csharp_examples.md
+        - C# API: rvc/sdk/csharp/csharp_api.md
+      - 版本更新记录: rvc/sdk/changelog.md
+  - VDA 系列产品:
+    - 产品介绍: vda/introduction.md
+    - 产品使用手册: 
+      - 目录: vda/user_guide/index.md
+      - 安全须知: vda/user_guide/safety.md  
+      - 使用注意事项: vda/user_guide/precaution.md
+      - 产品安装: vda/user_guide/mounting.md
+      - 标记物选择: vda/user_guide/speckling.md
+      - 软件快速操作: vda/user_guide/software.md
+      - 维护说明: vda/user_guide/maintenance.md      
+      - 异常情况处理: vda/user_guide/faq.md
+      - 产品参数: vda/user_guide/datasheet.md
+    - VDA Analyzer 操作手册: 
+      - VDA Analyzer 介绍: vda/vda_analyzer/index.md
+      - 软件安装: vda/vda_analyzer/installation.md
+      - 界面介绍: vda/vda_analyzer/overview.md
+      - 准备工作: vda/vda_analyzer/preparation.md
+      - 标定: vda/vda_analyzer/calibration.md
+      - 全场应变分析: vda/vda_analyzer/analysis_strain.md
+      - 刚性位移分析: vda/vda_analyzer/analysis_rigid.md
+      - 常见问题及处理: vda/vda_analyzer/faq.md
+      - 版本更新记录: vda/vda_analyzer/changelog.md
+  - 工具软件:
+    - 工具概览: tools/index.md
+    - 手眼标定软件: 
+      - 软件介绍: tools/hecm/introduction.md
+      - 软件操作手册: 
+        - 软件安装: tools/hecm/software/installation.md
+        - 界面介绍: tools/hecm/software/overview.md
+        - 标定步骤: tools/hecm/software/calibration.md
+        - 常见问题及处理: tools/hecm/software/faq.md
+      - SDK 开发教程: 
+        - SDK 概览: tools/hecm/sdk/overview.md
+        - C++:
+          - C++ SDK 配置步骤: tools/hecm/sdk/cpp/cpp_tutorial.md
+          - C++ 例程: tools/hecm/sdk/cpp/cpp_examples.md
+          - C++ API: tools/hecm/sdk/cpp/cpp_api.md
+        - Python:
+          - Python SDK 配置步骤: tools/hecm/sdk/python/python_tutorial.md
+          - Python 例程: tools/hecm/sdk/python/python_examples.md
+          - Python API: tools/hecm/sdk/python/python_api.md
+  - 配件产品: 
+    - 概览: accessories/overview.md
+  - 联系我们: support/contact.md
 
 plugins:
   - search:
@@ -26,19 +150,71 @@ plugins:
           - en
           - ja
           - zh
-      separator: '[\s\-\.]+'
-
-# extra:
-#  version:
-#    provider: mike      
-
-markdown_extensions:
-  - admonition
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-      
+      separator: '[\s\-\.]+' 
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: zh
+          default: true
+          name: 中文
+          build: true
+          site_name: "产品文档中心"
+        - locale: en
+          name: English
+          build: true
+          site_name: "Product Documentation Center"
+          theme:
+            palette:
+              primary: red
+          nav_translations:
+            首页: Home
+            RVC 系列产品: RVC 3D Scanners
+            产品介绍: Introduction
+            产品使用手册: User Guide
+            目录: Contents
+            安全与监管: Safety Precautions
+            工作环境: Environmental Conditions
+            相机硬件安装: Mounting Guide
+            软件快速使用: RVCManager Quick Start
+            维护说明: Maintenance
+            异常情况处理: Troubleshooting
+            扩展阅读: Advanced Topics
+            RVCManager 使用手册: RVCManager User Manual
+            RVCManager 介绍: Introduction
+            软件安装: Installation
+            界面介绍: Interface Overview
+            相机连接: Connecting the Device
+            拍摄与图像查看: Capturing and Viewing
+            参数设置: Parameter Settings
+            数据保存: Saving Data
+            常见问题及处理: Troubleshooting
+            版本更新记录: Changelog
+            RVC SDK 使用手册: RVC SDK Tutorial
+            SDK 概览: Overview
+            C++ SDK 配置步骤: C++ SDK Configuration
+            C++ SDK 例程: C++ Examples
+            C++ API: C++ API
+            Python SDK 配置步骤: Python SDK Configuration
+            Python SDK 例程: Python Examples
+            Python API: Python API
+            C# SDK 配置步骤: C# SDK Configuration
+            C# SDK 例程: C# Examples
+            C# API: C# API
+            版本更新记录: Changelog
+            VDA 系列产品: VDA Systems
+            产品介绍: Introduction
+            硬件安装手册: Mounting Guide
+            VDA Analyzer 操作手册: VDA Analyzer User Manual         
+            工具软件: Tools
+            工具概览: Index
+            手眼标定软件: Hand Eye Calibration Master
+            软件介绍: Introduction
+            软件操作手册: User Manual
+            手眼标定 SDK: Hand Eye Calibration Master SDK
+            SDK 开发教程: SDK Tutorial
+            配件产品: Accessories
+            概览: Overview 
+            联系我们: Contact Us
