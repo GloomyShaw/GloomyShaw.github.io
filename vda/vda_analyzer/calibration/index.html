@@ -1,0 +1,1432 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://rvbust.pages.rvbust.com/product-documentation-center/vda/vda_analyzer/calibration/">
+      
+      
+        <link rel="prev" href="../preparation/">
+      
+      
+        <link rel="next" href="../analysis_strain/">
+      
+      
+      <link rel="icon" href="../../../assets/rv_logo.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>标定 - 产品文档中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="产品文档中心" class="md-header__button md-logo" aria-label="产品文档中心" data-md-component="logo">
+      
+  <img src="../../../assets/rv_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            产品文档中心
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              标定
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../en/vda/vda_analyzer/calibration/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../introduction/" class="md-tabs__link">
+          
+  
+  VDA 系列产品
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="产品文档中心" class="md-nav__button md-logo" aria-label="产品文档中心" data-md-component="logo">
+      
+  <img src="../../../assets/rv_logo.png" alt="logo">
+
+    </a>
+    产品文档中心
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VDA 系列产品
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            VDA 系列产品
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    产品介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    产品使用手册
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            产品使用手册
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    目录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/safety/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安全须知
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/precaution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    使用注意事项
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/mounting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    产品安装
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/speckling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    标记物选择
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    软件快速操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/maintenance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    维护说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    异常情况处理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/datasheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    产品参数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VDA Analyzer 操作手册
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            VDA Analyzer 操作手册
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VDA Analyzer 介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    软件安装
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    界面介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preparation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    准备工作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    标定
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    标定
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    在线标定
+  </a>
+  
+    <nav class="md-nav" aria-label="在线标定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    激光标定
+  </a>
+  
+    <nav class="md-nav" aria-label="激光标定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2d" class="md-nav__link">
+    2D 激光标定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d" class="md-nav__link">
+    3D 激光标定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    多点标定
+  </a>
+  
+    <nav class="md-nav" aria-label="多点标定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    自动识别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    手动选点
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    离线标定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    标定结果参数说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    坐标调整
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis_strain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    全场应变分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis_rigid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    刚性位移分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见问题及处理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    版本更新记录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    在线标定
+  </a>
+  
+    <nav class="md-nav" aria-label="在线标定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    激光标定
+  </a>
+  
+    <nav class="md-nav" aria-label="激光标定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2d" class="md-nav__link">
+    2D 激光标定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d" class="md-nav__link">
+    3D 激光标定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    多点标定
+  </a>
+  
+    <nav class="md-nav" aria-label="多点标定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    自动识别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    手动选点
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    离线标定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    标定结果参数说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    坐标调整
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">标定</h1>
+<p>VDA Analyzer 提供激光标定、多点标定两种标定方法，用户可根据不同使用场景选择更适合的方式。本章详述两种标定方法的操作步骤。</p>
+<table>
+<thead>
+<tr>
+<th>标定方法</th>
+<th>支持标定模式</th>
+<th>速度</th>
+<th>设备要求</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>激光标定</td>
+<td>仅在线标定</td>
+<td>相对较慢</td>
+<td>必须带有激光测距仪</td>
+<td>不方便放置标定板、距离太远、无法直接测量的场景。</td>
+</tr>
+<tr>
+<td>多点标定</td>
+<td>在线标定、离线标定</td>
+<td>相对较快</td>
+<td>通用</td>
+<td>可放置标定板、方便测量的场景。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">在线标定</h2>
+<p>操作前，需先按 <a href="../preparation/#AdjustView">调整成像效果</a> 调整相机视野、曝光、焦距，使得标定板（或标定区域，后同）位于相机视野范围内，成像清晰且亮度适中。</p>
+<div class="admonition tip">
+<p class="admonition-title">提示</p>
+<p>通常，标定选取的点在视野内间隔较远即可。实际操作中，可选视野宽度的 1/10—1/2 作为点距，即标定板大致占视野宽度的 1/3。</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>标定时，相机不必与标定板平面垂直，但应使标定板处于目标平面上。</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>标定完成后，仅允许调节镜头光圈，不允许调节镜头焦距、挪动设备或被测物，否则会影响后续分析工作。</p>
+</div>
+<p>完成调整后，在主界面 → 在线标定配置区，选择设备与对应的镜头高精度文件，并在下拉框中选择“激光标定”或“多点标定”，点击【确认】打开在线标定页。</p>
+<div align=center><img src="../../../assets/vda/vda_analyzer/HomeCalibOnline.png" alt="HomeCalibOnline"></div>
+
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>如果未购买本公司工控机，主界面中镜头高精度文件将显示为空。请联系本公司客服获取高精度文件，将文件夹解压后拷贝至软件安装目录下的 CamCalibConfig 文件夹下。</p>
+</div>
+<h3 id="_3">激光标定</h3>
+<p>激光标定的原理是通过相机到目标物 3 个指定点的距离建立目标世界坐标系，激光照射的第 1、2、3 点分别确定目标世界坐标系的原点 O、x 轴正方向、y 轴正方向，在软件界面中显示为 O 点、X 点、Y 点。</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>激光标定时选取的标定面不能反光，否则可能影响识别。</p>
+</div>
+<h4 id="2d">2D 激光标定</h4>
+<ol>
+<li>
+<p>通过鹰眼盒背面的旋钮调整激光方向，使得相机视图中的激光点照射到所需的原点 O 的位置。</p>
+</li>
+<li>
+<p>单击相机视图中的激光点中心处，触发激光测距，鹰眼盒至激光点的距离将自动记录在标定数据区。按同样的方法，依次用激光确定相机视图中点 X、点 Y 的位置，并完成相应的测距。</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>选择 X 点时，应使射线 OX 与期望的 x 轴正方向一致；选择 Y 点时，应使射线 OY 与 OX 大致垂直。</p>
+</div>
+<p><img alt="LaserCalib2D" src="../../../assets/vda/vda_analyzer/LaserCalib2D.png" /></p>
+</li>
+<li>
+<p>完成 3 点测距后，点击【标定】。计算完成后将弹出标定结果展示窗口。如果确定使用当前标定结果，点击【保存】，标定数据将自动保存至本地。</p>
+<p><img alt="LaserCalib2DResult" src="../../../assets/vda/vda_analyzer/LaserCalib2DResult.png" /></p>
+</li>
+</ol>
+<h4 id="3d">3D 激光标定</h4>
+<ol>
+<li>
+<p>通过左鹰眼盒背面的旋钮调整左激光方向，使得左、右相机视图中，左激光点照射到所需的原点 O 的位置。</p>
+</li>
+<li>
+<p>同样地调整右激光方向，使得左、右相机视图中，左激光点、右激光点与原点 O 的位置均重合。</p>
+</li>
+<li>
+<p>依次单击左、右视图中的激光点中心处，触发激光测距，左、右鹰眼盒至激光点的距离将自动记录在标定数据区。按同样的方法，依次用激光确定左、右相机视图中点 X、点 Y 的位置，并完成相应的测距。</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>左、右相机的激光点必须重合。激光点重合后，左、右视图中的激光点都需要点击触发测距。</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>选择 X 点时，应使射线 OX 与期望的 x 轴正方向一致；选择 Y 点时，应使射线 OY 与 OX 大致垂直。           </p>
+</div>
+<p><img alt="LaserCalib3D" src="../../../assets/vda/vda_analyzer/LaserCalib3D.png" /></p>
+</li>
+<li>
+<p>左、右相机均完成 3 点测距后，点击【标定】。计算完成后将弹出标定结果展示窗口。如果确定使用当前标定结果，点击【保存】，标定数据将自动保存至本地。</p>
+<p><img alt="LaserCalib3DResult" src="../../../assets/vda/vda_analyzer/LaserCalib3DResult.png" /></p>
+</li>
+</ol>
+<h3 id="_4">多点标定<span id="#MultiCalib"><span></h3>
+<p>多点标定的原理是通过标定板 4 个圆心之间的距离建立目标世界坐标系。标定板下排的 2 个圆心依次记为 P1、P2，上排的 2 个圆心依次记为 P3、P4。P1 确定坐标系的原点 O，P2 确定 x 轴正方向，P3 确定 y 轴正方向，P4 作为坐标系校验点。标定时建议使用 <a href="../preparation/#Caliboard">本公司定制的标定板</a>，如有订购需求，请联系本公司销售。</p>
+<p>多点标定可自动识别标定板圆心，也可手动选点。若使用标定板进行标定，建议选择自动识别功能；若不方便放置标定板（如测量地点在户外且与设备距离较远），或自动识别失败，可采用手动选点。</p>
+<h4 id="_5">自动识别</h4>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>多点标定自动识别模式下，视野区域内不能有其他明显圆环，否则可能影响识别。</p>
+</div>
+<ol>
+<li>
+<p>使标定板尽可能位于相机视野中心位置。</p>
+</li>
+<li>
+<p>下拉选择标定板规格，在“识别方式”中点选“自动识别”。软件将自动检测标定板的 4 个圆心位置，相机视图中展示 4 个圆心与各点间的理论距离。</p>
+<p><img alt="MultiCalibAuto3D" src="../../../assets/vda/vda_analyzer/MultiCalibAuto3D.png" /></p>
+</li>
+<li>
+<p>完成自动识别后，点击【标定】。计算完成后将弹出标定结果展示窗口，视图中显示坐标系，下方显示标定数据。如果确定使用当前标定结果，点击【保存】，标定数据将自动保存至本地。</p>
+<p><img alt="MultiCalibResult3D" src="../../../assets/vda/vda_analyzer/MultiCalibResult3D.png" /></p>
+</li>
+</ol>
+<h4 id="_6">手动选点</h4>
+<ol>
+<li>
+<p>在“识别方式”中点选“手动选点”，标定板下拉框选择 NULL。</p>
+</li>
+<li>
+<p>在相机视图中用鼠标左键单击，依次选择 4 个点。P1、P2、P3 分别对应原点 O、x 轴正方向、y 轴正方向，P4 位于 xOy 平面内。如需取消选点，点击鼠标右键逐次取消。</p>
+<p>对于 3D 设备，左、右相机视图中各需按此操作选取 4 个点，且左、右相机视图中所选的点应按选取顺序依次对应。</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>选择 P2 点时，应使射线 P1P2 与期望的 x 轴正方向一致；选择 P3 点时，应使射线 OY 与 OX 大致垂直。</p>
+</div>
+<p><img alt="MultiCalibManual" src="../../../assets/vda/vda_analyzer/MultiCalibManual.png" /></p>
+</li>
+<li>
+<p>通过实地测量或其他方法获取上述 4 点之间的实际距离值，在距离区中输入对应的距离值。数据填写完成后，视图上会显示距离信息，可对比实际物体，检查距离输入是否正确。</p>
+<p><img alt="MultiCalibManualData" src="../../../assets/vda/vda_analyzer/MultiCalibManualData.png" />    </p>
+</li>
+<li>
+<p>点击【标定】。计算完成后将弹出标定结果展示窗口，视图中显示坐标系，下方显示标定数据。如果确定使用当前标定结果，点击【保存】，标定数据将自动保存至本地。</p>
+<p><img alt="MultiCalibManualResult" src="../../../assets/vda/vda_analyzer/MultiCalibManualResult.png" />   </p>
+</li>
+</ol>
+<h2 id="_7">离线标定</h2>
+<p>用 VDA 采集的文件可进行离线标定。当标定结果需要更改时，可使用离线标定功能，利用标定文件复现在线标定场景，重新选点标定。</p>
+<p>如果进行过标定，标定文件夹内会生成在线工程标定文件 31415926535A.txt。重新进行标定后，该文件中的标定数据会更新。需要使用新的标定结果时，可将更新后的文件 31415926535A.txt 拷贝至离线数据文件夹，替换之前的版本。</p>
+<p>离线标定仅支持多点标定方法，操作步骤如下。</p>
+<ol>
+<li>
+<p>准备离线标定文件夹。离线标定文件夹内的必要文件组成见下表。</p>
+<table>
+<thead>
+<tr>
+<th>文件功能描述</th>
+<th>2D 版本</th>
+<th>3D 版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>相机高精度文件</td>
+<td>31415926535A_L.txt</td>
+<td>31415926535A_L.txt（左相机）<br>31415926535A_R.txt（右相机）</td>
+</tr>
+<tr>
+<td>相机相元大小及点位距离信息文件</td>
+<td>CalibrationMsg.txt</td>
+<td>CalibrationMsg.txt</td>
+</tr>
+<tr>
+<td>相机拍摄的标定区域图像</td>
+<td>calib_image.bmp</td>
+<td>left_calib_image.bmp（左相机）<br>right_calib_image.bmp（右相机）</td>
+</tr>
+</tbody>
+</table>
+<p>获取离线标定文件夹的方式有 2 种：</p>
+<ul>
+<li>
+<p>自动生成：VDA Analyzer 软件使用期间会自动触发拍照。采集的标定文件夹以“Calibration_拍摄时间”的形式命名，默认保存在安装路径下的 VDA_CameraFrame 文件夹内。进行离线标定时，可直接选取对应的文件夹。</p>
+</li>
+<li>
+<p>手动采集：点击【相机控制】，在“基础”选项中点击【拍照】，采集的图像默认保存在安装路径下的 VDA_CameraFrame 文件夹内。新建离线标定文件夹，按上述文件组成，将必备的文件拷贝至文件夹内，并修改图像文件名为指定形式。</p>
+<p><img alt="TakeImage" src="../../../assets/vda/vda_analyzer/TakeImage.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>在主界面 → 离线标定配置区，点击【打开标定文件夹】，选择离线标定文件夹。若文件被成功识别，界面将展示标定类型（2D 或 3D）及预览图。点击【下一步】，进入离线标定页。</p>
+<p><div align=center><img src="../../../assets/vda/vda_analyzer/HomeCalibOffline.png" alt="HomeCalibOffline"></div></p>
+</li>
+<li>
+<p>进入离线标定页之后的操作步骤与 <a href="#MultiCalib">在线多点标定</a> 一致。</p>
+</li>
+</ol>
+<h2 id="_8">标定结果参数说明</h2>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>2D 版本</th>
+<th>3D 版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>焦距</td>
+<td>当前设备使用的镜头焦距</td>
+<td>当前设备使用的镜头焦距</td>
+</tr>
+<tr>
+<td>物距</td>
+<td>相机到物体的距离</td>
+<td>左物距对应左相机到物体的距离，右物距对应右相机到物体的距离</td>
+</tr>
+<tr>
+<td>基线长度</td>
+<td>无</td>
+<td>左、右镜头的中轴线距离</td>
+</tr>
+<tr>
+<td>欧拉角</td>
+<td>α 数值对应 x 轴绕角，β 数值对应 y 轴绕角</td>
+<td>α 数值对应 x 轴绕角，β 数值对应 y 轴绕角，γ 数值数值对应 z 轴绕角</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_9">坐标调整</h2>
+<p>对于 3D 标定，如果标定结果与实际基本一致，可保存数据，完成标定。若显示结果与实际相差较多，则需进行坐标调整，进行坐标系旋转或平移。</p>
+<ol>
+<li>
+<p>在坐标调整栏点击【启动】，在左相机视图中用鼠标左键单击，依次选择 4 个点。P1、P2、P3 分别对应原点 O、x 轴正方向、y 轴正方向，P4 位于 xOy 平面内。如需取消选择，可鼠标右键单击，逐点取消。</p>
+<p><img alt="CoordinateAdjustStart" src="../../../assets/vda/vda_analyzer/CoordinateAdjustStart.png" /> </p>
+</li>
+<li>
+<p>在右相机视图中，按同样的方法选取 4 个点。左、右相机视野中所选的点应按选取顺序依次对应。</p>
+<p><img alt="CoordinateAdjust" src="../../../assets/vda/vda_analyzer/CoordinateAdjust.png" />   </p>
+</li>
+<li>
+<p>选点结束后，点击【执行】。计算完成后，视图中将更新至重新计算的坐标系，下方显示重新计算后的标定数据。</p>
+<p><img alt="CoordinateAdjusted" src="../../../assets/vda/vda_analyzer/CoordinateAdjusted.png" /> <br />
+如果对此结果满意，点击【接受】，之后点击【保存】，标定数据将自动保存至本地。如果对此结果不满意，点击【拒绝】，系统将恢复至前一次标定结果，可保留前一次标定结果，或再次进行坐标调整操作。</p>
+</li>
+</ol>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../preparation/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 准备工作" rel="prev">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                准备工作
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../analysis_strain/" class="md-footer__link md-footer__link--next" aria-label="下一页: 全场应变分析" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                全场应变分析
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+
+    <div class="md-copyright__highlight">
+    Copyright © RVBUST
+    </div>
+
+
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+    Material for MkDocs
+    </a>
+    and localized using the
+    <a href="https://ultrabug.github.io/mkdocs-static-i18n/" target="_blank" rel="noopener">
+    MkDocs Static i18n Plugin
+    </a>
+
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "toc.follow"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1465 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://rvbust.pages.rvbust.com/product-documentation-center/vda/vda_analyzer/analysis_strain/">
+      
+      
+        <link rel="prev" href="../calibration/">
+      
+      
+        <link rel="next" href="../analysis_rigid/">
+      
+      
+      <link rel="icon" href="../../../assets/rv_logo.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>全场应变分析 - 产品文档中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="产品文档中心" class="md-header__button md-logo" aria-label="产品文档中心" data-md-component="logo">
+      
+  <img src="../../../assets/rv_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            产品文档中心
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              全场应变分析
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../en/vda/vda_analyzer/analysis_strain/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../introduction/" class="md-tabs__link">
+          
+  
+  VDA 系列产品
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="产品文档中心" class="md-nav__button md-logo" aria-label="产品文档中心" data-md-component="logo">
+      
+  <img src="../../../assets/rv_logo.png" alt="logo">
+
+    </a>
+    产品文档中心
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VDA 系列产品
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            VDA 系列产品
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    产品介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    产品使用手册
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            产品使用手册
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    目录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/safety/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安全须知
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/precaution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    使用注意事项
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/mounting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    产品安装
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/speckling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    标记物选择
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    软件快速操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/maintenance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    维护说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    异常情况处理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/datasheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    产品参数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VDA Analyzer 操作手册
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            VDA Analyzer 操作手册
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VDA Analyzer 介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    软件安装
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    界面介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preparation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    准备工作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calibration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    标定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    全场应变分析
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    全场应变分析
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    在线分析
+  </a>
+  
+    <nav class="md-nav" aria-label="在线分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    分析参数
+  </a>
+  
+    <nav class="md-nav" aria-label="分析参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    分析参数分类说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    子集区域
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    初始估计
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    分析结果显示
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    离线分析
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    分析回放
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis_rigid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    刚性位移分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见问题及处理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    版本更新记录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    在线分析
+  </a>
+  
+    <nav class="md-nav" aria-label="在线分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    操作步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    分析参数
+  </a>
+  
+    <nav class="md-nav" aria-label="分析参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    分析参数分类说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    子集区域
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    初始估计
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    分析结果显示
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    离线分析
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    分析回放
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">全场应变分析</h1>
+<p>完成标定后，即可进行分析。本章描述如何使用 VDA Strain Analyzer 软件进行全场应变分析。</p>
+<h2 id="_2">在线分析</h2>
+<p>在线分析分为 2D 在线分析与 3D 在线分析。3D 在线分析要求设备必须进行过标定，2D 在线分析可以不标定。标定过的设备可分析实际位移 (mm)，未标定的设备只能分析像素位移。</p>
+<p>操作前，需先检查成像效果，使得被测物位于相机视野范围内，成像清晰且亮度适中。</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>标定完成后，仅允许调节镜头光圈，不允许调节镜头焦距、挪动设备或被测物，否则会影响后续分析工作。</p>
+</div>
+<h3 id="_3">操作步骤<span id="AnalysisStrain"></span></h3>
+<ol>
+<li>
+<p>在主界面 → 在线分析配置区，选择对应的设备，点击【确认】打开在线分析页。</p>
+<p><div align="center"><img src="../../../assets/vda/vda_analyzer/HomeAnalysisOnline.png" alt="HomeAnalysisOnline"></div></p>
+</li>
+<li>
+<p>点击【分析设置】，弹出分析参数设置窗口。在相机视图中选择感兴趣区域 ROI (Region of Interest)，选取 ROI 时的鼠标 + 键盘操作方式见下表。</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>ROI 操作</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>添加 ROI</td>
+<td>鼠标左键拖动。</td>
+</tr>
+<tr>
+<td>删除 ROI</td>
+<td>鼠标右键单击，逐次取消之前选择的 ROI。<br>Ctrl + 鼠标右键单击，选中指定的 ROI 并删除。</td>
+</tr>
+<tr>
+<td>移动 ROI</td>
+<td>Ctrl + 鼠标左键拖动。</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="StrainROI" src="../../../assets/vda/vda_analyzer/StrainROI.png" /></p>
+<p></center></p>
+</li>
+<li>
+<p>在分析参数设置窗口修改“子集宽度”“子集高度”数值，相机视图中将以黄色方框标记出子集区域。调整参数值，确保子集区域内包含足够多的纹理变化。其他分析参数与输出云图类型可根据分析需求进行调整，参数解释详见 <a href="#StrainPara">全场应变 - 分析参数分类说明</a>。</p>
+<p><img alt="StrainSubset" src="../../../assets/vda/vda_analyzer/StrainSubset.png" /></p>
+</li>
+<li>
+<p>关闭分析参数设置窗口，点击【开始分析】。若启动成功，云图显示区将展示实时应变云图。</p>
+<p><img alt="StrainResult" src="../../../assets/vda/vda_analyzer/StrainResult.png" /></p>
+</li>
+<li>
+<p>对于 3D 设备，若未检测到深度信息，将出现提示框，跳转至深度计算。</p>
+<p>(1) 根据相机视图，判断被测物上距离相机基线最近、最远的点。</p>
+<p>(2) 根据提示，在左、右相机视图中，依次选择上一步中确定的最近点与最远点。左、右相机视图中的点位应依次对应。</p>
+<p><div align="center"><img src="../../../assets/vda/vda_analyzer/DepthCalculate.png" alt="DepthCalculate"></div></p>
+<p>进行深度计算完成后，点击【确定】，回到在线分析页。再次点击【开始分析】，若启动成功，云图显示区将展示实时应变云图。</p>
+</li>
+</ol>
+<h3 id="_4">分析参数</h3>
+<h4 id="_5">分析参数分类说明<span id="StrainPara"></span></h4>
+<p>分析参数设置窗口中的参数分类及解释如下。将光标置于参数选项上，可查看参数解释与操作说明。</p>
+<ul>
+<li>
+<p><strong>绘制</strong></p>
+<p>主要用于在视图中设置 ROI 区域，参数功能说明见下表。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>添加方式</td>
+<td>新增 ROI：新增被测区域。<br>新增抠除：在 ROI 中抠除不需要分析的区域，被抠除区域必须完整位于原 ROI 内。</td>
+</tr>
+<tr>
+<td>区域形状</td>
+<td>可选择矩形、圆形、多边形，每次添加 1 个 ROI（或抠除区域）时均可设置。</td>
+</tr>
+<tr>
+<td>清空监测区域</td>
+<td>清除已设置的所有 ROI，Ctrl + 鼠标单击生效。</td>
+</tr>
+<tr>
+<td>清空并导入监测区域</td>
+<td>从 roi_msg.txt 文件导入 ROI 位置信息，原 ROI 将被清空。</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>参数</strong></p>
+<p>用于设置应变分析参数。如需修改参数值，可拖动滑块调整，或 Ctrl + 鼠标单击输入指定数值。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>子集宽度<br>子集高度</td>
+<td>分析时特征匹配区域的大小，在视图中以黄色方框区域显示。ROI 及子集区域的选取要求见 <a href="#SubsetStrain">子集区域</a>。</td>
+</tr>
+<tr>
+<td>最大相关系数</td>
+<td>分析时特征匹配相似度约束，数值越小约束越严格，建议不超过 0.5。</td>
+</tr>
+<tr>
+<td>扩散系数</td>
+<td>扩散约束系数。约束越严格，图像细节信息越可能被保留。</td>
+</tr>
+<tr>
+<td>采样步长</td>
+<td>对原始图片下采样的大小，在⼦集尺⼨的 1/3 到 1/2 之间。</td>
+</tr>
+<tr>
+<td>最大应变约束</td>
+<td>用于过滤局部异常应变值，通常保持为 0.5 即可。</td>
+</tr>
+<tr>
+<td>滤波窗口</td>
+<td>均值计算时考虑的邻域范围。</td>
+</tr>
+<tr>
+<td>水平搜索范围<br>垂直搜索范围</td>
+<td>被测点的水平、垂直查找范围，建议不超过子集大小的 1.5 倍。</td>
+</tr>
+<tr>
+<td>计算深度范围</td>
+<td>3D 分析时，计算标定板与被测物之间的纵深距离。</td>
+</tr>
+<tr>
+<td>分析模式</td>
+<td>正常模式适用于小位移场景，大位移模式适用于大位移、大形变场景。</td>
+</tr>
+<tr>
+<td>分析策略</td>
+<td>默认模式适用于大部分场景，多种子点适用于形变较大的场景。</td>
+</tr>
+<tr>
+<td>初始估计</td>
+<td>选择初始估计模式。设为手动时，需要在弹窗中选择视图上的对应点以确认距离关系，每 1 个 ROI 需要选择 3 个对应点。左、右图像差距较大时建议使用，操作步骤见 <a href="#InitialGuessStrain">初始估计</a>。</td>
+</tr>
+<tr>
+<td>使用扩展视野分析</td>
+<td>使用全图信息进行分析。对旋转较大的场景分析成功率会提高，但分析速度会变慢。</td>
+</tr>
+<tr>
+<td>增量分析</td>
+<td>本帧与第 1 帧对比无法得出结果时，通过与上一帧对比得出正确结果。通常在目标变化较大时使用，如目标被遮挡、光影变化较大、轻微自旋等。</td>
+</tr>
+<tr>
+<td>应变求解方法</td>
+<td>可选择拉格朗日法或欧拉法。</td>
+</tr>
+<tr>
+<td>参数重置</td>
+<td>将所有分析参数恢复为默认值，Ctrl + 鼠标单击生效。</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>预分析</strong></p>
+<p>ROI 与分析参数配置完成后，点击【预分析】可查看分析效果预览。对于离线分析，还会给出完整分析预估用时。</p>
+</li>
+<li>
+<p><strong>输出</strong></p>
+<p>对于分析结果，可选择输出的云图类型。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>输出云图类型</td>
+<td>选择云图中显示哪些分量。<br>x, y, z：世界坐标<br>u, v, w：x, y, z 方向位移值<br>ex, ey：应变<br>exy：剪应变<br>e1, e2：主应变</td>
+</tr>
+<tr>
+<td>存储回放数据</td>
+<td>离线分析时可设置是否保存回放数据，启用后可查看分析结果回放。</td>
+</tr>
+<tr>
+<td>存储原始数据</td>
+<td>勾选后将当前显示云图的数据保存为.csv 文件，边分析边保存。</td>
+</tr>
+<tr>
+<td>存储图片数据</td>
+<td>勾选后保存当前显示的云图，可选择图片格式 (.jpg/.bmp/.png) 及图中是否包含参考色带，边分析边保存。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4 id="_6">子集区域<span id="SubsetStrain"></span></h4>
+<p>选取 ROI 与子集区域时，应确保子集区域包含足够多的纹理变化，在此基础上适当减小分析面积。选取子集区域较大时，可获取更丰富的纹理信息，但会增大计算量，减缓 VDA 分析速度；选取子集区域较小时，可获取的纹理信息不足，会降低 VDA 分析质量。</p>
+<h4 id="_7">初始估计<span id="InitialGuessStrain"></span></h4>
+<p>对于 3D 设备，VDA 默认自动匹配左、右画面。若左、右相机成像角度差异较大，自动匹配功能会失效，可手动选点进行匹配。</p>
+<p>点击【分析设置】，在通用参数 → 初始估计中下拉选择“手动”。关闭参数设置窗口，点击【开始分析】，根据软件提示，依次进行左、右视图像素点匹配。对于每 1 个 ROI，都需完成 3 组像素点匹配。</p>
+<p>第 1 组：左视图中的第 1 点为系统选定，无法更改。使用空格键 + 鼠标滚轮放大视图，在右视图中，选择与左视图中位置对应的点。</p>
+<p>第 2 组：在左视图中手动选择第 2 点。同样地，在右视图中选择与左视图位置对应的点。</p>
+<p>第 3 组：在左视图中手动选择第 3 点，需确保左视图中的 3 点不共线。同样地，在右视图中选择与左视图位置对应的点。</p>
+<div align="center"><img src="../../../assets/vda/vda_analyzer/InitialGuessPoints.png" alt="InitialGuessPoints"></div>
+
+<p>完成匹配后，即可启动分析。</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>选点时，需确保左、右视图中 3 点各不共线。每次选点允许 1—2 个像素的偏差，选择时请尽可能放大视图进行匹配。</p>
+</div>
+<h3 id="_8">分析结果显示</h3>
+<p>在云图显示区，可通过云图上方的设置栏调整当前云图的显示方式。将光标置于云图点位上，可查看该点对应的分析数据。云图右边的彩色条形为色带，旁边标注有数据范围，用于对比查看云图中的应变值。</p>
+<div align="center"><img src="../../../assets/vda/vda_analyzer/CloudMapDisplay.png" alt="CloudMapDisplay"></div>
+
+<ul>
+<li>
+<p>点击云图左上角的下拉框，选择 u/v/w 或 exx/eyy/exy/e1/e2，可切换不同分析分量的云图。</p>
+</li>
+<li>
+<p>点击 <img src="../../../assets/vda/vda_analyzer/icons/SaveCloudMap.png" alt="icon-SaveCloudMap" width="30" height="30" align="top"> 可保存云图。.csv 格式可保存云图所有的点位信息，.jpg 格式可保存为图片形式。可设置是否保存色带、图像中颜色过度程度。</p>
+</li>
+<li>
+<p>点选“指定范围”，可修改色带值的上下限。</p>
+</li>
+</ul>
+<h2 id="_9">离线分析</h2>
+<p>使用 VDA 采集的文件可进行离线分析。2D 离线分析还可使用其他来源的.bmp 图像，也可将其他格式的图片、视频转换为.bmp 图像序列，进行像素分析。3D 离线分析只能使用本软件录制的.vdd 格式视频，或将视频转换为.bmp 图像序列，进行位移分析。</p>
+<p>离线分析操作步骤如下。</p>
+<ol>
+<li>
+<p>准备离线分析文件夹。离线分析文件夹内的必要文件组成见下表。</p>
+<table>
+<thead>
+<tr>
+<th>文件功能描述</th>
+<th>文件名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>相机标定文件</td>
+<td>31415926535A.txt</td>
+</tr>
+<tr>
+<td>相机采集的视频或图像序列（格式需为.vdd 或.bmp，3D 版本左、右相机图像数量与命名需一一对应）</td>
+<td><strong>.vdd 视频流</strong>：<br>img_00000001.vdd<br>img_00000002.vdd<br>img_00000003.vdd<br>……<br><strong>.bmp 图像（2D 版本）</strong>：<br>left_00000001.bmp<br>left_00000002.bmp<br>left_00000003.bmp<br>……<br><strong>.bmp 图像（3D 版本）</strong>：<br>left_00000001.bmp<br>left_00000002.bmp<br>left_00000003.bmp<br>……<br>right_00000001.bmp<br>right_00000002.bmp<br>right_00000003.bmp<br>……</td>
+</tr>
+<tr>
+<td>ROI 坐标文件（可选，需要使用固定 ROI 区域时导入）</td>
+<td>roi_msg.txt</td>
+</tr>
+</tbody>
+</table>
+<p>获取离线分析文件夹的方式有 2 种：</p>
+<ul>
+<li>
+<p>VDA 软件采集：点击【相机控制】，在“基础”选项中点击【录像】，完成后点击【停止】。采集的离线分析文件夹以“VDD_Frame_拍摄时间”的形式命名，默认保存在安装路径下的 VDA_CameraFrame 文件夹内。.vdd 视频文件按拍摄时间命名，进行在线分析时，可直接选取对应的文件夹。</p>
+<p><img alt="TakeVideo" src="../../../assets/vda/vda_analyzer/TakeVideo.png" /> </p>
+</li>
+<li>
+<p>其他采集来源：其他设备采集的图像序列也可用于 VDA 离线分析。</p>
+<p>(1) 首先需进行图像转换与命名。进入导航栏 → 工具 → 图像转换，“待转换文件夹”选择需要转换的图像文件夹，“图片类型”选择图像原格式；在“导出命名规则”中设置图像命名是否加上 left_ 或 right_，“导出文件夹”选择导出路径。</p>
+<p><img alt="ImageTransfer" src="../../../assets/vda/vda_analyzer/ImageTransfer.png" /></p>
+<p>(2) 完成图像转换后，新建离线分析文件夹。按前面所述的文件组成，将必备的文件拷贝至文件夹内，并修改文件名为指定形式。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>在主界面 → 离线分析配置区，点击【打开分析文件夹】，选择离线分析文件夹。若文件被成功识别，界面将展示分析类型（2D 或 3D）及预览图。点击【下一步】，进入离线分析页。</p>
+<p><div align="center"><img src="../../../assets/vda/vda_analyzer/HomeStrainAnalysisOffline.png" alt="HomeStrainAnalysisOffline"></div></p>
+</li>
+<li>
+<p>在离线分析页 → 分析控制区 → 分析控制页，可调整分析间隔与分析进度；点击【分析参数】 → 输出 → 存储回放数据，设置是否存储数据用于分析结果回放。</p>
+<p><img alt="StrainAnalysisControl" src="../../../assets/vda/vda_analyzer/StrainAnalysisControl.png" /></p>
+</li>
+<li>
+<p>之后的操作步骤与 <a href="#AnalysisStrain">在线分析</a> 基本一致。</p>
+</li>
+</ol>
+<h2 id="_10">分析回放</h2>
+<p>如果离线分析时选择保存回放数据，之后可查看结果回放。回放数据包含分析参数、ROI、分析结果云图等信息，回放过程中无法修改分析参数，但可调整回放速度与区间，可在云图显示区调整云图显示形式、保存数据等。</p>
+<ul>
+<li>
+<p><strong>结果回放</strong></p>
+<p>在分析控制区 → 回放控制页，选择回放数据。拖动下方进度条可调整回放速度与回放区间，点击【开始】查看分析回放。</p>
+<p><img alt="StrainPlayback" src="../../../assets/vda/vda_analyzer/StrainPlayback.png" /></p>
+</li>
+<li>
+<p><strong>应变分析</strong></p>
+<p>离线分析回放时，可通过应变分析功能提取数据信息。操作步骤如下。</p>
+<p>(1) 点击【应变分析】，打开应变曲线分析弹窗，弹窗内显示视图与 ROI 信息。</p>
+<p>(2) 在视图中点击点位（最多可选择 20 个点），勾选需要分析的应变方向，点击【开始分析】。</p>
+<p>(3) 分析完成后，视图下方会展示每个点对应的数据曲线。在曲线显示区点击选中曲线，点击【曲线自适应】，可根据数值变化大小，调整曲线显示范围；点击【保存曲线值】，可将曲线数据信息保存至偏好路径中。</p>
+<p><img alt="StrainCurveAnalysis" src="../../../assets/vda/vda_analyzer/StrainCurveAnalysis.png" /></p>
+</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../calibration/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 标定" rel="prev">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                标定
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../analysis_rigid/" class="md-footer__link md-footer__link--next" aria-label="下一页: 刚性位移分析" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                刚性位移分析
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+
+    <div class="md-copyright__highlight">
+    Copyright © RVBUST
+    </div>
+
+
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+    Material for MkDocs
+    </a>
+    and localized using the
+    <a href="https://ultrabug.github.io/mkdocs-static-i18n/" target="_blank" rel="noopener">
+    MkDocs Static i18n Plugin
+    </a>
+
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "toc.follow"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
